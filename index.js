@@ -11,11 +11,24 @@ function generator() {
         characterList += randomCharacter
     }
     return characterList
+
 }
 
 function startGenerator() {
+    let password1 = document.getElementById("password-1")
+    let password2 = document.getElementById("password-2")
+
     password1.textContent = generator()
     password2.textContent = generator()
+
+    let result = document.getElementById("result")
+    let displaySetting = result.style.display
+
+    if (displaySetting = 'flex') {
+        result.style.display = 'flex'
+    } else {
+        result.style.display = 'none'
+    }
 }
 
 
